@@ -1,0 +1,20 @@
+<%- include ('partials/navbar.ejs') %>
+
+<div class="container mt-3">
+    <div class="row text-center">
+      <%  Pedidos.forEach((Pedidos) =>{%>
+        <div class="col-md-4 mb-4">
+            <div id="card-produtos" class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title"">Pedido: <%=Pedidos.numeroPedido%> - R$<%=Pedidos.precoTotal%></h5>
+                    <p class="card-text"  style="font-size: 20px;"><%= Pedidos.cliente %></p>
+                    <a href="/Produtos" class="btn btn-light">Ver Pedido</a>
+                </div>
+            </div>
+        </div>
+<% }) %>
+
+
+    </div>
+    </div>
+<%- include ('partials/footer.ejs') %>

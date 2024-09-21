@@ -1,0 +1,48 @@
+<%- include ('partials/navbar.ejs') %>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Página de Clientes</h1>
+  </div>
+<div class="container mt-5">
+    <div class="row">
+
+              
+       
+<% Clientes.forEach((Clientes)=>{ %>
+    <div class="col-md-4 pb-3">
+        <div class="card">
+          <img  src="/imgs/Clientes/<%=Clientes.nome%>.jpg" class="card-img-top" alt="Imagem 1">
+          <div class="card-body">
+            <h5 class="card-title"><%= Clientes.nome %> - <%= Clientes.CPF %></h5>
+            <p class="card-text"><%= Clientes.endereco%> </p>
+            <a href="/<%= Clientes.nome%>" class="btn btn-danger">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+        
+<% }) %>
+    </div>
+</div>
+
+
+
+
+<%- include ('partials/footer.ejs') %>
+<!--<div class="card">
+          <img class="card-img-top " src="" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title"><%= Clientes.nome %> - <%= Clientes.CPF %> </h5>
+            <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+            <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+          </div>
+        </div>  
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        <div class="card-columns">
+        <div class="card">
+        <img class="card-img-top" id="icon" src="/imgs/Perfill.png" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title"><%= Clientes.nome %> - <%= Clientes.CPF %></h5>
+          <p class="card-text"><%=Clientes.endereco%></p>
+        </div>
+      </div>
+    </div>

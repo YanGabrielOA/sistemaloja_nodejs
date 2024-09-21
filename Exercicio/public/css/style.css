@@ -1,0 +1,33 @@
+#icon{
+   width: 900px;
+   height: 624px; 
+}
+#body{
+   background-color: #F1F1F1;
+}
+#hero {
+   background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGpoMTN5cWU4NXo3ZmJ6dTg2a3lqeHB0aHNqaHJxaXk1bG1kN2VuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mwUsXwFqlwI48/giphy.gif');
+   background-size: cover;
+   background-position: center;
+   color: white;
+   height: 500px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+#hero h1 {
+   font-size: 4rem;
+   font-weight: bold;
+}
+#hero p {
+   font-size: 1.5rem;
+}
+
+/* Estilo dos cards */
+#card-produtos, #card-pedidos, #card-clientes {
+   transition: transform 0.3s ease;
+}
+#card-produtos:hover, #card-pedidos:hover, #card-clientes:hover {
+   transform: scale(1.05);
+}

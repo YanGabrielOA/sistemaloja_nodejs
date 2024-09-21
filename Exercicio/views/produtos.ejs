@@ -1,0 +1,25 @@
+<%- include ('partials/navbar.ejs') %>
+<div class="container mt-5" >
+  <h1 class="text-center mb-4">Página de Produtos</h1>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <% Produtos.forEach((Produtos) => {%>
+    <div class="col-md-3 pb-3">
+      <div class="card ">
+        <img
+          src="/imgs/Produtos/<%=Produtos.nome%>.jpeg"
+          class="card-img-top"
+          alt="<%=Produtos.nome%>"
+        />
+        <div class="card-body pd-1">
+          <h5 class="card-title"><%= Produtos.nome %> - R$<%= Produtos.preco %></h5>
+          <p class="card-text"><%=  Produtos.descricao %></p>
+          <a href="/<%= Produtos.nome%>" class="btn btn-danger">Ver mais</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<%- include ('partials/footer.ejs') %>
